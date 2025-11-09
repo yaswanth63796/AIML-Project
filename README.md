@@ -75,7 +75,7 @@ Child-Labour-Detection-System/
 Follow the steps below to set up and run the project locally:
 
 ### Step 1: Clone the repository
-git clone https://github.com/YOUR-USERNAME/Child-Labour-Detection-System.git
+git clone https://github.com/yaswanth63796/AIML-Project.git
 cd Child-Labour-Detection-System
 
 ### Step 2: Create and activate a virtual environment
