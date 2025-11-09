@@ -1,15 +1,14 @@
-Child Labour Detection System
-Overview
+<u>Child Labour Detection System</u>
+<u>Overview</u>
 
 The Child Labour Detection System is a deep learning-based computer vision project developed to automatically detect potential instances of child labour from surveillance footage or images. Manual inspection for identifying child labour is inefficient and error-prone. This project leverages Convolutional Neural Networks (CNNs) such as VGG16, ResNet, and YOLOv3 to automate this detection process, supporting organizations and authorities in monitoring and preventing child exploitation.
 
-Objective
+<u>Objective</u>
 
 The primary objective of this project is to design and implement an intelligent, automated, and scalable system capable of identifying and classifying child labour activities in real-world environments using deep learning techniques.
 
-Methodology
-
-Dataset Preparation
+<u>Methodology</u>
+1. Dataset Preparation
 
 The dataset contains video samples categorized as Child Labour and Adult Labour.
 
@@ -17,23 +16,23 @@ Video frames are extracted, resized, normalized, and labeled.
 
 The prepared frames are used to train CNN-based models.
 
-Model Training
+2. Model Training
 
 CNN architectures such as VGG16, ResNet, and YOLOv3 are implemented for classification tasks.
 
 The models learn to differentiate between adult and child workers using supervised learning.
 
-Detection Process
+3. Detection Process
 
 Video frames are analyzed individually through the trained model.
 
 A voting mechanism aggregates frame-level predictions to decide whether a video segment indicates child labour.
 
-Evaluation
+4. Evaluation
 
 Model performance is assessed using key metrics such as Accuracy, Precision, Recall, and F1-Score.
 
-Technologies Used
+<u>Technologies Used</u>
 Category	Tools / Frameworks
 Programming Language	Python
 Deep Learning Framework	PyTorch
@@ -42,7 +41,7 @@ Model Architectures	VGG16, ResNet, YOLOv3
 Machine Learning Utilities	Scikit-learn
 Data Handling	NumPy, Pandas
 Visualization	Matplotlib, Seaborn
-Project Structure
+<u>Project Structure</u>
 Child-Labour-Detection-System/
 │
 ├── Data_frames/                # Dataset (train/test/validation)
@@ -58,38 +57,38 @@ Child-Labour-Detection-System/
 ├── README.md                    # Project documentation
 └── LICENSE                      # License file (optional)
 
-Installation and Setup
+<u>Installation and Setup</u>
 
 Follow the steps below to set up and run the project locally:
 
-1. Clone the repository
+Step 1: Clone the repository
 git clone https://github.com/YOUR-USERNAME/Child-Labour-Detection-System.git
 cd Child-Labour-Detection-System
 
-2. Create and activate a virtual environment
+Step 2: Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate      # For Windows
 source venv/bin/activate   # For Linux/Mac
 
-3. Install dependencies
+Step 3: Install dependencies
 pip install -r requirements.txt
 
-4. Train the model
+Step 4: Train the model
 python scripts/train_model.py
 
-5. Evaluate the model
+Step 5: Evaluate the model
 python scripts/evaluate_model.py
 
-6. (Optional) Run the web application
+Step 6: (Optional) Run the web application
 python app.py
 
-Evaluation Metrics
+<u>Evaluation Metrics</u>
 Metric	Description
 Accuracy	Measures overall correctness of predictions.
 Precision	Indicates how many of the detected child labour instances are actually correct.
 Recall	Reflects how well the model identifies actual cases of child labour.
 F1-Score	Harmonic mean of precision and recall, providing a balanced performance measure.
-Future Enhancements
+<u>Future Enhancements</u>
 
 Integration of real-time video stream processing.
 
@@ -99,12 +98,12 @@ Implementation of an alert system for live detection.
 
 Expanding dataset diversity for improved accuracy.
 
-Contributors
+<u>Contributors</u>
 
 Yaswanth V — Project Developer & Researcher
 
-License
+<u>License</u>
 
 This project is licensed under the MIT License.
-See the LICENSE
- file for details.
+Refer to the LICENSE
+ file for more information.
