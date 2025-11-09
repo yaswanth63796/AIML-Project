@@ -1,108 +1,110 @@
-# 🧠 Child Labour Detection System
+Child Labour Detection System
+Overview
 
-## 📘 Overview
-The **Child Labour Detection System** is a Deep Learning-based Computer Vision project designed to automatically identify instances of child labour from video footage or surveillance data. Traditional monitoring methods rely on manual inspections, which are time-consuming and prone to errors.  
-This system utilizes **Convolutional Neural Networks (CNNs)** such as **VGG16** and **ResNet** to detect the presence of children in industrial or working environments, helping NGOs and authorities monitor and prevent child exploitation efficiently.
+The Child Labour Detection System is a deep learning-based computer vision project developed to automatically detect potential instances of child labour from surveillance footage or images. Manual inspection for identifying child labour is inefficient and error-prone. This project leverages Convolutional Neural Networks (CNNs) such as VGG16, ResNet, and YOLOv3 to automate this detection process, supporting organizations and authorities in monitoring and preventing child exploitation.
 
----
+Objective
 
-## 🎯 Objective
-To develop an **intelligent, automated, and scalable system** that detects and classifies child labour activities from real-world video surveillance using deep learning models.
+The primary objective of this project is to design and implement an intelligent, automated, and scalable system capable of identifying and classifying child labour activities in real-world environments using deep learning techniques.
 
----
+Methodology
 
-## 🧠 Methodology
+Dataset Preparation
 
-1. **Dataset Preparation**
-   - Dataset includes videos categorized as *Child Labour* and *Adult Labour*.
-   - Frames are extracted, resized, and normalized.
-   - Each frame is labeled and prepared for CNN training.
+The dataset contains video samples categorized as Child Labour and Adult Labour.
 
-2. **Model Training**
-   - CNN architectures like **VGG16**, **ResNet**, or **YOLOv3** are used.
-   - Models learn to distinguish between adult and child workers.
+Video frames are extracted, resized, normalized, and labeled.
 
-3. **Detection Process**
-   - Each frame is analyzed individually.
-   - A **voting mechanism** determines if a video segment involves child labour.
+The prepared frames are used to train CNN-based models.
 
-4. **Evaluation**
-   - Performance is measured using **Accuracy**, **Precision**, **Recall**, and **F1-Score**.
+Model Training
 
----
+CNN architectures such as VGG16, ResNet, and YOLOv3 are implemented for classification tasks.
 
-## 🧰 Technologies Used
+The models learn to differentiate between adult and child workers using supervised learning.
 
-| Category | Tools / Frameworks |
-|-----------|--------------------|
-| Programming Language | Python |
-| Deep Learning Framework | PyTorch |
-| Computer Vision | OpenCV |
-| Model Architectures | VGG16, ResNet, YOLOv3 |
-| Machine Learning Library | Scikit-learn |
-| Data Handling | NumPy, Pandas |
-| Visualization | Matplotlib, Seaborn |
+Detection Process
 
----
+Video frames are analyzed individually through the trained model.
 
-## 📁 Project Structure
+A voting mechanism aggregates frame-level predictions to decide whether a video segment indicates child labour.
 
+Evaluation
+
+Model performance is assessed using key metrics such as Accuracy, Precision, Recall, and F1-Score.
+
+Technologies Used
+Category	Tools / Frameworks
+Programming Language	Python
+Deep Learning Framework	PyTorch
+Computer Vision	OpenCV
+Model Architectures	VGG16, ResNet, YOLOv3
+Machine Learning Utilities	Scikit-learn
+Data Handling	NumPy, Pandas
+Visualization	Matplotlib, Seaborn
+Project Structure
 Child-Labour-Detection-System/
 │
-├── Data_frames/ # Dataset (train/test/validation)
-├── models/ # Saved model files (.pth)
-├── scripts/ # Python scripts
-│ ├── train_model.py
-│ ├── evaluate_model.py
-│ └── preprocess_videos.py
-├── static/ # Frontend static files (optional)
-├── templates/ # HTML templates (optional, if using Flask)
-├── app.py # Flask web application (optional)
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-└── LICENSE # License file (optional)
+├── Data_frames/                # Dataset (train/test/validation)
+├── models/                     # Trained model files (.pth)
+├── scripts/                    # Python scripts for processing and training
+│   ├── train_model.py
+│   ├── evaluate_model.py
+│   └── preprocess_videos.py
+├── static/                     # Static files (if web interface used)
+├── templates/                  # HTML templates (if using Flask)
+├── app.py                      # Flask web application entry point
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+└── LICENSE                      # License file (optional)
 
-yaml
-Copy code
+Installation and Setup
 
----
+Follow the steps below to set up and run the project locally:
 
-## ⚙️ Installation and Setup
+1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/Child-Labour-Detection-System.git
+cd Child-Labour-Detection-System
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/Child-Labour-Detection-System.git
-   cd Child-Labour-Detection-System
-Create and activate a virtual environment
-
-bash
-Copy code
+2. Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate      # For Windows
 source venv/bin/activate   # For Linux/Mac
-Install required dependencies
 
-bash
-Copy code
+3. Install dependencies
 pip install -r requirements.txt
-Run model training
 
-bash
-Copy code
+4. Train the model
 python scripts/train_model.py
-Evaluate the trained model
 
-bash
-Copy code
+5. Evaluate the model
 python scripts/evaluate_model.py
-(Optional) Run the web app
 
-bash
-Copy code
+6. (Optional) Run the web application
 python app.py
-📊 Evaluation Metrics
+
+Evaluation Metrics
 Metric	Description
-Accuracy	Measures overall prediction correctness
-Precision	How many predicted child labour cases were correct
-Recall	How many actual child labour cases were detected
-F1-Score	Harmonic mean of Precision and Recall
+Accuracy	Measures overall correctness of predictions.
+Precision	Indicates how many of the detected child labour instances are actually correct.
+Recall	Reflects how well the model identifies actual cases of child labour.
+F1-Score	Harmonic mean of precision and recall, providing a balanced performance measure.
+Future Enhancements
+
+Integration of real-time video stream processing.
+
+Model optimization for deployment on edge devices (e.g., Raspberry Pi).
+
+Implementation of an alert system for live detection.
+
+Expanding dataset diversity for improved accuracy.
+
+Contributors
+
+Yaswanth V — Project Developer & Researcher
+
+License
+
+This project is licensed under the MIT License.
+See the LICENSE
+ file for details.
